@@ -4,8 +4,6 @@
 
 `data.dtypes` muestra tipo de datos existentes
 
-
-
 ## 5. Operaciones de manejo de datos
 
 ### Distribución
