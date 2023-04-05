@@ -31,7 +31,7 @@ const app = Vue.createApp({
     },
     methods:{
 
-    }
+    }
 })
 app.mount('#app');
 ```
@@ -40,7 +40,7 @@ El "método" app se va a montar en el div con *class='app'*.
 
 Vue binding: mandar parámetro dentro del mismo vue. -> `v-bind`
 
-    `v-on`: se usa para botones: `... v-on:click = "cambiarUsuario()... "`
+    `v-on`: se usa para botones: `... v-on:click = "cambiarUsuario()... "`
 
 Para ahorrar se puede poner solo los `:`.
 
@@ -86,15 +86,15 @@ Objetos en json son con `nombre: valor`.
 
 **Estados:** información e e sitio, lo que está sucediendo independiente de vistas y componentes.
 
-    *state* información que se estará manejando. Variables, cambios de movimiento.
-
-    *getters* para recuperar información del estado.
-
-    *mutations* modifica el estado.
-
-    *actions* como mutación, PERO, con código asíncrono (consulta api's), manda llamar a mutación
-
-    *modules* para siertas páginas
+    *state* información que se estará manejando. Variables, cambios de movimiento.
+    
+    *getters* para recuperar información del estado.
+    
+    *mutations* modifica el estado.
+    
+    *actions* como mutación, PERO, con código asíncrono (consulta api's), manda llamar a mutación
+    
+    *modules* para siertas páginas
 
 **component:** 
 
@@ -144,7 +144,7 @@ Oculta las características no relevantes de una clase. Especialidades de una pr
 
 Lo que conforma a la profeción.
 
-     __Qué puede hacer__ .  
+     __Qué puede hacer__ .  
 
 **Polimorfismo** 
 
@@ -225,7 +225,7 @@ Programación en un solo documento
 | :bookmark_tabs:Clase: Conjunto de <u>objetos</u> con características similares que se identifican por nombre, atributos y una serie de funciones o métodos aplicables a todo el conjunto. Es una plantilla para caracterizar o definir objetos. |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| :leaves::art:Abstracción: Es la facultad intiuitiva del ser humano que le permite conocer la <u>escencia</u> de las cosas. |
+| :leaves::art:Abstracción: Es la facultad intiuitiva del ser humano que le permite conocer la <u>escencia</u> de las cosas. |
 | -------------------------------------------------------------------------------------------------------------------------- |
 
 | :microscope:Modularidad: Es un proceso mental que permite <u>distinguir</u> los componentes de los objetos que estan siendo estudiados. |
@@ -262,7 +262,7 @@ Programación en un solo documento
 
 **Método** 
 
-`nivel_de_acceso tipo_static valor_de_retorno nombre_método(){    }`
+`nivel_de_acceso tipo_static valor_de_retorno nombre_método(){    }`
 
 Un constructor no es método porque no se puede acceder a el :arrow_heading_down:. 
 
@@ -286,9 +286,9 @@ Es un...
 
 Si entre dos o más clase hay interacción que no modificará nada el comportamiento del objeto 
 
-  Modo de interacción donde no utilizas interacción a corto plazo.. .. 
+  Modo de interacción donde no utilizas interacción a corto plazo.. .. 
 
-  Persona :standing_person: <u>usa</u> una bicilceta :bike: 
+  Persona :standing_person: <u>usa</u> una bicilceta :bike: 
 
 * :heavy_plus_sign: **Agregación**
 
@@ -355,7 +355,7 @@ class Persona{ //privado
   ...
 Persona(){
   System.out.println("Hola")
-  }
+  }
 }
 public class Emp extends Persona{ //error
 ...  
@@ -392,36 +392,46 @@ Multitarea -> multiproceso o multihilo.
 
 Proceso con espacio de memoria.
 
+Realizan varias acciones al mismo tiempo. Coordian 
+
 Cambios de proceso pesan :weight_lifting_man:.
 
 Cada proceso asigna espacio de memria y guarda registros de donde está el espacio.
 
-:twisted_rightwards_arrows:Hilos comparten mismo espacio :artificial_satellite:.
+:spider_web:Hilos :twisted_rightwards_arrows:comparten mismo espacio :artificial_satellite:.
 
 :car:Distribuidor vial -> Toma diferentes caminos sin cambiar el sentido. Menos costosos.
 
-Estados
+Estados:
 
-* 
+* New
+
+* Runnable
+  
+  * Non-Runnable
 
 * Running
 
-* 
+* Terminated
 
+**Callbacks**
 
+Runnable es interface que dice qué hace.
+
+El cómo lo hace es el hilo que está en la clase thread.
+
+Calbacks descriptivos
 
 **Paralelismo**
 
 Multiples hilos. Soporta multiples peticiones
 
-
-
 **Concurrencia**
 
 Procesa todas las solicitudes. Se acomodan en grupos.
 
-
-
 ### Proyecto
 
-Crear dentro de src nuevo package semana 1    
+Crear dentro de src nuevo package semana 1    
+
+Let-code

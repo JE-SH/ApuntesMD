@@ -2,8 +2,6 @@
 
 El presente documento es para conoce lo básico de crear un markdown
 
-
-
 # Windmill Dashboard
 
 A multi theme, completely accessible, with components and pages examples, ready for production dashboard.
