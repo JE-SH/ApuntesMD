@@ -1537,6 +1537,16 @@ Kanban consta de tareas y se divide en 5 etapas: documentación, creación de pr
 
 [Recomendación del curso SCRUM](https://medium.com/@andrewdjandrw/qu%C3%A9-es-scrum-674c6b791af4)
 
+## GIT
+
+git init para inicializar un nuevo proyecto
+
+git add . permite agregar los archivos modificados.
+
+git config `--local` o `--global` permite cambiar las configuraciones de manera local de la carpeta o global.
+
+git log para ver commits
+
 ## Java JRE y JDK
 
 ### Compilar y ejecutar primer programa
@@ -1925,8 +1935,6 @@ public void saca(double valor){
 
 Las bombas de excepciones tratadas (heredadas de Exception), deben tener tratamiento, ya sea con **throws** o **try catch**. 
 
-
-
 ### Finaly
 
 Siempre se ejecuta independientemente si se ejecuta try o catch
@@ -1941,17 +1949,11 @@ finally(){
 
 try puede vivir con finally solamente, solo con catch o los 3.
 
-
-
 Existe `try(Conexion con = new Conexion(){}} ` implementa un `autoclose` en la clase **Conexion**, en el cual se implementa la interfaz **autoclosable**.
-
-
 
 ## Clase Object y String
 
 ### Usando paquetes
-
-
 
 Para la organización de archivos podemos crear carpetas nuevas. Dentro de la ventana "navigator" es posible crear una carpeta con "new" > other >general > folder, en la que se le agregará el n nombre de la nueva carpeta para separar aquellso archivos.java para tener una nueva estructura.
 
@@ -1969,15 +1971,11 @@ FQN (*Full Qualified Name*) es el nombre completo de la clase, que consta del no
 
 **FQN**= Nombre del paquete. Nombre de clase simple
 
-
-
 **import** ayuda a importar las clases de otro paquete.
 
 `import com.bytebank.modelo.Funcionario;` es declarada en las primeras líneas. Se agregan las clases arriba del archivo para abreviar el código.
 
 `import com.bytebank.modelo.*` nos permite **abreviar** y adjuntar todas las clases dentro de la carpeta *modelo*.
-
-
 
 ### Modificadores de acceso
 
@@ -1990,8 +1988,6 @@ El **default** (sin nada) es visible dentro del mismo paquete.
 **protected** es visible dentro del paquete y dentro del nivel de herencia.
 
 **private** no puede estar fuera de la clase. -- MAS RESTRICTIVO
-
-
 
 ### Documentación javadoc
 
@@ -2031,11 +2027,7 @@ Por convención se crea una carpeta con **lib** para poner el archivo jar.
 
 Para crear un **jar ejecutable** se da en export >jar file>next>next>main class
 
-
-
 **Maven** organiza los JARs (código compilado, código fuente y documentación) en un repositorio central que es público: [mvnrepository.com](https://mvnrepository.com/)
-
-
 
 String es inmutable, no cambia.
 
@@ -2048,15 +2040,11 @@ El método toString() existe para devolver información sobre el estado del obje
 
 El método toString() existe para ser reemplazado.
 
-
-
 clase System
 
 clase Object
 
 Super clase padre OBJETO, todos son objetos.
-
-
 
 ## Java y Java.util
 
@@ -2064,13 +2052,9 @@ Super clase padre OBJETO, todos son objetos.
 
 `CuentaAhorros cuenta = (CuentaAhorros) referencias[1];`
 
-
-
 Tipo de dato, array, variable, el tamaño.
 
 `int[] variable = new int[5];`
-
-
 
 Utilizamos **ArrayList** para crear una lista. Ya que guarda objetos se necesita hacer casteo.
 
@@ -2087,8 +2071,6 @@ Se especifica el tipo con el **operador diamante**:
 La clase **contain** llama a **equals**, el cual se puede sobrescribir para verificar que dos objetos sean iguales, o en este caso sus atributos.
 
 **LinkedList** tienen referencia y es parecido a **ArrayList**. Puede remover e insertar de manera ordenada.
-
-
 
 **Vector** = thread safe: crea una sola instancia para ser accesada por toda la pila de ejecución para nuestro programa.
 
@@ -2109,11 +2091,7 @@ lista.add(numero);
 
 `int valorPrimitivo = numeroObjeto ` = `int valorPrimitivo = numeroObjeto.intValue();`
 
-
-
 **Number** superclase de objetos de números primitivos .
-
-
 
 Interfaz,  implementacion
 
@@ -2123,7 +2101,7 @@ Dentro de una nueva clase se implementa la interfaz compare y se crea el método
 
 ```java
 class OrdeaPorNumeroCuenta implements Comparator<Cuenta>{
-    
+
 @override
 public int compare(Cuenta o1, Cuenta o2){
     if(o1.getNumero==o2)
@@ -2142,11 +2120,7 @@ lista.sort(comparador);
 
  `Collections.sort()`era usada aneriormente.
 
-
-
 Las interfaces no se pueden instanciar.
-
-
 
 ### Clases anónimas.
 
@@ -2161,8 +2135,6 @@ Collections.sort(lista, new Comparaor(){
 })
 ```
 
-
-
 ### Lambdas
 
 Los parámetros se envían a la operación que está enseguida de la flecha.
@@ -2175,7 +2147,1943 @@ lista.sort((Cuenta o1, Cuentao2) -> {
 
 `lista.foreach(cuenta->System.out.println(cuenta));`
 
+## SQL
 
+### Inicios
+
+Ventajas: 
+
+* Costo reducido aprendizaje
+
+* Portabilidad
+
+* Longevidad
+
+* Comunicación
+
+* Libertad de elección
+
+Desventajas:
+
+* Fala de creatividad.
+
+* NoSQL
+
+* Falta de estructuración de su lenguaje
+
+Estándares:
+
+CREATE, READ, UPDATE y DELETE.
+
+## Lean Startup: Método eficaz para convertir una idea de negocio en empresa
+
+### Lean Startup
+
+**Método de experimentación y aprendizaje validado**
+
+* Constuir
+
+* Medir
+
+* Aprender
+
+Revisar el público al que va dirigido.
+
+**Early adopters**
+
+* Primeros usuarios
+
+* Ayudan a modelar el producto
+
+* Cliente en el centro del diseño de tu negocio
+
+**Producto mínimo viable**
+
+* Ayuda a probar hipótesis
+
+* Pasa por etapas (para mejorar)
+
+* No necesita ser un producto final
+
+* Refinado a travéz del proceso de validación
+
+* Un experimento ya es un producto
+
+### Etapas del MPV
+
+Producto Mínimo viable
+
+1 público
+
+1 problema 
+
+1 solución
+
+Registrar todo
+
+1. Explorar el problema
+
+2. Estructurar el producto
+
+3. Probar / validar
+   
+   Blogs o landing page para probarlo
+
+Concierge ->acompañamiento con el cliente...
+
+### Medir y pivotar
+
+Métricas para revisar si el programa genera interés y los clientes se quedan, o el tiempo que le dedican  la app.
+
+ Las métricas de vanidad que nos muestran números positivos superficiales deben ser evitadas. Las métricas accionables nos permiten entender el problema y tomar decisiones para nuestro negocio.
+
+Pivotes:
+
+* Zoom in: una idea de producto y se pivota para una característica **específica**.
+
+* Zoom out: Una pequeña funcionalidad se transforma en una gran aplicación.
+
+* Segmento de clientes
+
+* Necesidades de clientes
+
+* Plataforma / producto
+
+* Arquitectura de negocios
+
+* Valor de captura
+
+* Motor de crecimiento
+
+* Canal
+
+* Tecnología
+
+### Acelerar,crecer e innovar
+
+En ocasiones es mejor desarrollar pequeños lotes pera mejorar productividad.
+
+:skateboard: - :: - :motorcycle: - :car:
+
+De donde viene el crecimiento?
+
+3 motores:
+
+* Recurrente 
+
+* Viral
+
+* Pago
+
+Técnica de los 5 porqué?
+
+Recursos escasos, no desperdicie
+
+Espacios de experimentación controlada
+
+Atribuya responsabilidades a los equipos de trabajo internos
+
+### Prototipar
+
+Dropbox, Wordpress, Wix, taqe, Google analitics, invisionapp, adobe XD, 
+
+Beneficios Lean
+
+* Economizar tiempo
+
+* Emprender más
+
+* Data freak
+
+* También funciona para intraemprendedores
+
+* Startups y Spin-offs
+
+## Emprendimiento
+
+### Defiiciones
+
+Características:
+
+* Compromiso
+
+* Determinación
+
+* Perseverancia
+
+* Ambición (Crecimiento)
+
+* Orientado a objetos
+
+* Iniciativa y proactividad
+
+* Tolerancia al estrés
+
+* Asumir riesgos calculados
+
+* Comparte riesgos
+
+* Maneja bien los errores
+
+* Capacidad de aprendizaje
+
+* Construir equipos
+
+x Invulnerabilidad
+
+x Inflexible
+
+x Antiautoridad
+
+x Impulsivo
+
+x Sin control
+
+x Perfeccionistas
+
+x Sabelotodo
+
+Formas de emprendimiento:
+
+* Starup. 
+  
+  Nuevos mercados
+  
+  Tecnología
+  
+  Escalable
+  
+  Disruptiva
+  
+  Incertidumbre
+  
+  Debe probar modelo de negocio
+  
+  Puede transformarse en un unicornio
+
+* Negocio life style
+  
+  Más tradicional
+
+Intraemprendimiento. Emprender dentro de alguna corporación.
+
+3 pilares:
+
+* Fundadores: 
+  
+  Equipo de fundación
+  
+  Experiencia en conocimientos
+  
+  Autoridad
+  
+  Gestión, habilidades y competencias
+  
+  Actitud, tenacidad, osadía
+  
+  Metas y objetivos claros
+
+* Oportunidades
+  
+  Encontrar la oportunidad
+  
+  Necesidad/problema real
+  
+  Tamaño del mercado
+  
+  Crecimiento
+  
+  Fuerzas
+  
+  Lucratividad y rentabilidad
+  
+  Clientes ángeles
+
+* Recursos necesarios
+  
+  Financieros
+  
+  Tecnología
+  
+  Producción
+  
+  Personas
+  
+  Sistemas
+  
+  Consejeros / consultores
+  
+  Controles de gestión 
+
+¿Mis metas están definidas?
+
+¿Mi estrategia está correcta?
+
+¿Puedo ejecutar la estrategia?
+
+Visión - Coraje - Competencia
+
+Suerte - talento - estrategia
+
+### Ideas vs oportunidades
+
+**Valor potencial:**
+
+Ver el problemas + solución con diferencial + emprendedor
+
+Idea + ejecución
+
+Atractividad del mercado
+
+Tamaño del mercado
+
+Compradores preparados
+
+Homogeneidad
+
+Verificar reglas y leyes
+
+### Atractividad de mercado
+
+El margen líquido vale la pena?
+
+Competencia-> ¿Cómo se defiende? ¿Cuales son sus competidores y sustitutos?    
+
+Diferencial -> ¿Por qué el producto es diferente?
+
+Fácil de divulgar 
+
+Equipo de trabajo
+
+### Modelo de negocio
+
+#### Propuesta de valor
+
+**Necesidad** que producto / servicio resuelve.
+
+**Segmento clientes**: edad, clase social, género...
+
+¿El mercado es nuevo o ya existe?
+
+¿Tendrá complementos?
+
+El perfeccionismo solo crea que se lanza muy tarde el producto.
+
+Precificación.
+
+#### Tecnologías, operaciones y márgenes
+
+¿Actividades necesarias para desarrollar producto?
+
+¿Posee propiedad intelectual?
+
+¿Cual es el Tiempo de Vida del Cliente esperado? (CVL)
+
+¿Cuál es el Coste de Adquisición del Cliente? (CAC)
+
+Margen - 
+
+    ganancias, costes 
+
+    BREAKEVEN (punto de equilibro), el momento en el que lo que se vende se cubren los costos fijos.
+
+Ritmo de crecimiento.
+
+Capital de giro.
+
+### Business Model Canvas
+
+Tabla con:
+
+* Fuentes de ingresos
+
+* Propuesta de valor
+
+* Canales
+
+* Segmento de clientes
+
+* Actividades principales
+
+* Recursos principales
+
+* Relación con clientes
+
+* Estructura de costes
+
+* Socios clave
+
+### Plan de negocios
+
+9 Elementos
+
+1. Resumen ejecutivo: Oportunidad para llamar la atención.
+   
+   * Concepto de negocio
+   
+   * UVP (Unique Value Proposition)
+   
+   * Inversión necesaria
+   
+   * Clientes y Mercado
+
+2. Producto o servicio: Presentar la idea.
+   
+   * Funcionalidades
+   
+   * Público objetivo
+   
+   * Fuentes de ingresos
+   
+   * Estado actual de desarrollo
+   
+   * ¿Ya existe evidencia?
+
+3. Equipo
+   
+   * Personas fundadoras
+   
+   * Capacidad de cada fundador para el éxito
+   
+   * División de responsabilidades
+
+4. Mercado
+   
+   * Tamaño del mercado
+   
+   * Potencial de crecimiento
+   
+   * Competencia
+   
+   * Puntos fuertes y debilidades
+
+5. Marketing y ventas
+   
+   * Cómo promover
+   
+   * Cómo difundir
+   
+   * Cómo fijar el precio
+
+6. Organización
+   
+   * Construir equipos de trabajo
+   
+   * Plan de contratación
+   
+   * Tercerización
+   
+   * Aliados
+   
+   * Canales de ventas
+
+7. Cronograma. Para los próximos 5 años
+   
+   * Responsables
+   
+   * Plazos
+   
+   * Hitos o Milestones
+
+8. Riesgos
+   
+   * El mejor y peor escenario
+   
+   * Principales riesgos
+   
+   * Cómo mitigar riesgos
+
+9. Finanzas. Para los próximos 5 años
+   
+   * Estado de resultados
+   
+   * Flujo de caja
+   
+   * Valuation - Como van a recuperar su inversión?
+   
+   * Balance
+   
+   * Fuentes de financiación
+
+= ESTADO DE RESULTADOS
+
+## Pitch para entrevistas: Haga presentaciones impactantes
+
+### Introducción
+
+Primeros pasos:
+
+* Contenido interesante
+
+* Hacer con que el otro quiera más información
+
+* Involucrar el otro
+
+* Escuche más de ti
+
+La gente compra por qué lo haces
+
+[Quién es Simon Sinek y cómo aplicar sus conceptos a tu empresa](https://rockcontent.com/es/blog/simon-sinek//)
+
+Reto de presentarse rápidamente 
+
+Escribir un **guion** simple, hablar de manera segura.
+
+Transmitirte espontáneamente.
+
+* Hablar formación académica
+
+* Informar objetivos, competencias y logros
+
+* Enfatizar cualidades
+
+* Elegir un proyecto del que se esté orgulloso
+
+* Describir y comentar contribuciones
+
+### Business model you
+
+Existe canvas para crear una preparación de alto conocimiento.
+
+1. ¿Quién te ayudó a ser quien eres hoy?
+
+2. ¿Qué sabes tu hacer?
+   
+   * Hard skills
+   
+   * Experiencias donde se hicieron
+
+3. ¿Qué eres tu y qué tienes para ofrecer?
+   
+   - Soft skills 
+
+4. ¿Cómo contribuye a quien lo contratará?
+   
+   * ¿Cuál es el tamaño de los proyectos que ha trabajado?
+   
+   * ¿Resultados expresivos que hayas tenido?
+
+5. ¿Cómo interactuas?
+   
+   * Habilidades para actuar con equipo
+   
+   * Nivel de habilidades para comunicarte
+
+6. ¿Cómo te conoce la gente?
+   
+   * 3 palabras
+
+7. ¿A quién ayudas?
+   
+   * Motivadores sociales
+- ¿Quién te ayudó a ser quién eres hoy?
+- ¿Qué sabes hacer?
+- ¿Quién eres y qué tienes para ofrecer?
+- ¿Cómo contribuirás a quién te contrate?
+- ¿Cómo interactúas?
+- ¿Cómo te conoce la gente?
+
+## Business Model Canvas
+
+**Brief**
+
+Entender el negocio. Es llamativa la app? Qué es lo que se hace dentro de la app? Qué dicen los usuarios en los comentarios?
+
+**Launchrock**. Lugar para ver si parece potencial la idea de negocio.
+
+EL BMC es Una guía para entender y cuestionar todos los puntos que determinan si una idea de negocio es viable o no.
+
+Los  modelos de negocio tradicionales son complejos. El Business Model Canvas es una herramienta que te ayuda a entender y agiliza la construcción de un modelo de negocio. Las áreas que cubre el Business Model Canvas de un modelo de negocio tradicional son: Infraestructura, clientes, viabilidad financiera y oferta.
+
+Herramienta para generar modelo de negocios.
+
+1. Segmento de clientes:
+   
+   * Para quién vamos a vender? Tipos de personas (UBER: conductor, cliente)
+   
+   * Tipos de mercado,  segmento de clientes. 
+     
+     Cual es el valor de cada uno?
+     
+     * Multilateral: no puede haber consola sin juegos, y no puede haber juegos sin consola)
+     
+     * Masa: todos buscan música
+     
+     * Nicho: Tinder 
+     
+     * Mercado segmentado: Bancos -> tarjetas gold, platino... diferente para todas las personas.
+     
+     * Diversificado: Amazon, supermercado
+
+2. Propuesta de valor. -> Es el conjunto de productos o servicios que crean valor para un segmento de mercado específico.
+   
+   * ¿Qué valor proporcionamos?
+   
+   * ¿Qué problema solucionamos?
+   
+   * ¿Qué necesidades de los clientes satisfacemos?
+   
+   Se divide en:
+   
+   * Cuantitativo
+   
+   * Cualitativo
+     
+     Novedad (snapchat) y estatus (ferrari)
+     
+     Reducción al riesgo (seguros)
+     
+     Conveniencia y usabilidad (ipad)
+     
+     Accesibilidad (Cine-netflix)
+     
+     Desempeño (comparar celulares)
+     
+     El trabajo hecho (facilitar la vida realizando acciones)
+     
+     Personalización (adaptación a las necesidades del cliente)
+     
+     Reducción de costos
+
+3. Canales
+   
+   Establece punto de contacto entre la empresa y los clientes.
+   
+   Da a conocer a clientes productos o servicios.
+   
+   Ayuda a clientes evaluar la propuesta de valor.
+   
+   Permitir que se compren los productos / servicios.
+   
+   Proporcionar propuesta de valor.
+   
+   Promover servicio de atención postventa.
+   
+   * ¿Cómo llegamos a los clientes identificados?
+   
+   * ¿Los clientes saben que existe la app?
+   
+   * ¿Cómo se integra nuestra app en las actividades diarias de nuestros clientes?
+   
+   TIPOS:
+   
+   * Offline
+     
+     Volantes, radio, tele
+   
+   * Online
+     
+     *Facebook para empresas*
+     
+     Google
+   
+   * Canales
+     
+     * Directo :factory: :arrow_right: :people_holding_hands:
+       
+       Entra en contacto con el cliente (Atención al cliente)
+     
+     * Indirecto :factory: :arrow_right:  :convenience_store: :arrow_right: :people_holding_hands:
+       
+       (Amazon go)
+     
+     * Socios comerciales :factory: :arrow_right: :classical_building: :arrow_right: :convenience_store: :arrow_right: :people_holding_hands:
+     
+     * Canal propio
+
+4. Relación con clientes
+   
+   * ¿Qué tipo de relación esperan los clientes?
+     
+     * Automático (chatbot)
+     
+     * Asistencia personal
+     
+     * Asistencia personal exclusiva
+     
+     * Creación colectiva
+     
+     * Comunidades (laneros, redit, dudas escolares)
+     
+     * Autoservicio (Preguntas frecuentes)
+
+5. Fuentes de ingresos
+   
+   Forma en que generamos dinero
+   
+   * ¿Qué valor están dispuestos a pagar?
+   
+   * ¿Por qué pagan actualmente?
+   
+   * ¿Cómo les gustarían pagar?
+     
+     * Cuota de suscripción (Netflix, dezzer)
+     
+     * Cuota por uso ( paquetes de telefonía)
+     
+     * Venta de activos (carro, bicicleta)
+     
+     * Licencias (Microsoft-office)
+     
+     * Préstamo y arriendos (alquilar inmueble)
+     
+     * Anuncios (Youtube ads)
+     
+     * Tasa de corretaje (comisión Transacción con tarjeta)
+     
+     * Tasa de uso (cobrar por uso)
+
+6. Recursos clave
+   
+   Recursos más importantes que necesitamos tener, para que nuestra empresa funcione.
+   
+   * Recurso humano (Instructores, editores, desarrolladores)
+   
+   * Recurso físico (Estudio, oficina, bodegas)
+   
+   * Intelectual (marcas, información privada, derechos de autor, base datos)
+   
+   * Económico (Préstamo para abrir negocio)
+
+7. Actividades clave
+   
+   Acciones más importantes que una empresa debe realizar para lograr su correcto funcionamiento.
+   
+   * Producción (Celulares -- Motorola-samsung)
+   
+   * Resolución de problemas (Consultorías)
+   
+   * Plataforma / Red (Software -- UBER)
+
+8. Socios clave
+   
+   Relaciones importantes. permiten  describir nuestra red de proveedores y socios que necesitamos para que todo funcione, optimizando el modelo de negocio y reduciendo el riesgo.
+   
+   * Recursos y actividades particulares (Conductores de UBER)
+   
+   * Optimización y economía de escala (Fabricantes de bicicletas)
+   
+   * Reducción de riesgos e incertidumbre (empresas de bicicletas urbanas)
+
+9. Estructura de costos
+   
+   Comprobamos y describimos los costos que implica el funcionamiento de un modelo de negocio, la creación y la entrega de valor a mis clientes.
+* Costos variables (No hay pago fijo - UBER y viajes)
+
+* Costo fijo ( Desarrolladores, personas con contrato laboral fijo)
+
+* Estructura direccionada según costos (Uber pool)
+
+* Estructura direccionada por el valor (hoteles)
+
+* Economía de escala (Supermercados mayoristas, cupones)
+
+* Economía de campo (Mercado libre). Equipo reducido 
+
+Otros:
+
+Lean model Canvas
+
+Social Business Model Canvas
+
+## Mysql
+
+Espacio de memoria especial para guardar los datos. Una BD tiene entidades llamadas:
+
+* Tablas: Campos (columnas) y registros (filas)
+
+* Esquema: agrupación de diferentes tablas (sinónimo)
+
+### Entidades
+
+#### Tablas
+
+Servidor robusto y multiacceso
+
+Portabilidad
+
+**Entidad** mayor llamada "base de datos". Espacio de memoria especial para guardar datos.
+
+La entidad importante de la DB es "**tabla**". **Campos** (filas) y **registros** (columnas).
+
+Tipos de campo:
+
+* Numérico
+
+* Texto
+
+* Fecha
+
+Se **definen** al momento de **crear** una tabla. 
+
+Tienen un **número limitado**. 
+
+**No** admiten datos no especificados.
+
+**Clave primaria**, campo donde ninguno de los registros se puede repetir. No obligatoria. Puede ser compuesta por dos campos. 
+
+**Clave foránea (externa)** Campo que relaciona tablas.
+
+**Esquemas** agrupación de tablas o datos que facilitan la agrupación por temas.
+
+**Índice** 
+
+Registros:
+
+Datos contenidos en campos
+
+Numero ilimitado
+
+#### View (Vistas)
+
+Puede tomar elementos de varias tablas para visualizar datos.
+
+se consultan tablas que pueden tener un alto costo de procesamiento.
+
+#### Procedures
+
+Logica estructurada con lenguaje nativo del SQL (if, while, for...). Se pueden crear funciones.
+
+#### Triger
+
+**Trigger** alerta para cuando haya cambio en la BD o tabla.
+
+### BD
+
+Para entrar utilizamos el comando `USE nombre` para entrar a la base de datos.
+
+Para **crear** una nueva base de datos utilizamos:
+
+```sql
+CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name [create option] ...
+create_option: [DEFAULT]{
+    CHARACTER SET [=] utf-8 | CO...
+}
+```
+
+CHARACTER SET ayuda a agregar la codificación para los caracteres especiales..
+
+COLLATE para organizar y comparar datos
+
+Encryption para encriptar los datos
+
+`CREATE DATABASE jugos;` para **crear**.
+
+`DROP SCHEMA jugos;` para eliminar db.
+
+Para poder entrar dentro de la línea de comandos, primero es ingresar a la carpeta de **mysql server** e ingresar a la carpeta **bin**. Una vez ahí, se escribe `mysql -h localhost - u root -p`
+
+h = host
+
+u = user
+
+p = password
+
+#### Tipos de datos
+
+TINYINT | SMALLINT | MEDIUMINT | INT | BIGINT
+
+FLOAT | DOUBLE
+
+DECIMAL (más exacto que float) | NUMERIC
+
+BIT | BIT(3)
+
+--
+
+**SIGNED** | **UNSIGNED**
+
+**ZEROFILL** -> llena espacios con 0. Ej INT(5) de 54 = 00054.
+
+**AUTO_INCREMENT**
+
+OUT OF RANGE -> error
+
+**DATE**-> AAAA / MM / DD | **DATETIME** | **TIMESTAMP** -> con zona horaria | **TIME** | **YEAR** 
+
+**STRING** | **CHAR** -> 0-255. Ej CHAR(4)-- aa= **aa | **VARCHAR** -> 0-255. Ej VARCHAR(4)-- aa=aa | **BINARY** | **VARBINARY** | **BLOB** -> TINYBLOB, MEDIUM+, LONG+ | **TEXT** | **ENUM** | **SET** ^ **COLLATE** -> el conjunto de caracteres aceptará utf-8, utf-16... | 
+
+**GEOMETRY** -> área | **LINESTRING**  -> linea | **POINT** -> punto geográfico | **POLYGON** -> área 2 dimensiones.
+
+Se utiliza `UPDATE` para modificar elementos de la tabla seleccionada. PERO cuendo se modifica el valor de una llave primaria, en *edit* vamos a *sql editor* y desmarcamos **SAFE UPDATES** 
+
+**DROP** se utiliza en objetos de la tabla (columnas o tablas)
+
+**DELETE** se usa para registros.
+
+Las llaves primarias es un campo donde no se puede volver a repetir. Se utiliza **ALTER TABLE** para poder añadirlo con **ADD PRIMARY KEY()**
+
+Utilizamos **AS** para modificar la vista de las columnas a recuperar. Ej `SELECT nombre AS nombre_completo, DIRECCION AS Domicilio FROM tbclientes`;
+
+Usamos **BETWEEN** <u>valor</u> **AND** para darle rango de revisión.
+
+Para filtrar **fechas**, podemos poner `SELECT * FROM tbcliente WHERE YEAR(FECHA_NACIMIENTO)= 1995;`
+
+## Java y JDBC
+
+Java Database Conectivity
+
+JDBC es un API del Java que posibilita que una aplicación construida en 
+el lenguaje consiga introducir un banco de datos configurado local o 
+remotamente. API es compuesta por los paquetes `java.sql` y `javax.sql`, incluidos en el JavaSE.
+
+`Engine=InnoDB` al momento de terminar de crear una tabla significa que aceptará operaciones dentro de una operación.
+
+Para crear la aplicación vamos a *FILE / NEW PROJECT / MAVEN PROJECT  / SELECCIONAR SIMPLE PROJECT / Group id: com.alura, control-de-stock / CLIC DERECHO / PROPERTIES / JAVA BUILD PATH / EDIT / WORK SPACE DEFAULT (11)*
+
+En el pom.xml se agregan las configuraciones del proyecto.
+
+agregar:
+
+```java
+<name>Control de Stock </name>
+<description>Proyecto para trabajar bases de datos con Java </description>
+<properties>
+    <java.version>11</java.version>
+</properties>
+<dependencies> //dependencias
+</dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifacrtId>
+            <version>3.7.0</version>
+            <configuration>
+                <source>${java.version}</source>
+                <target>$java.version</target>
+                <optimize>true</optimize>
+            </configuration>
+        <plugin>
+     <plugins>
+</build>
+```
+
+En la carpeta *main/java*, creamos un nuevo paquete llamado com.alura.tests, creamos una clase *PruebaConexion*.
+
+Dentro de esta clase mandamos llamar `Connection con = DriverManager.getConnection(  ` dentro tendrá la conexión a la base de datos, el usuario y contraseña. 
+
+```java
+import java.sql.DriverManager;
+import java.sql.Connection;
+```
+
+```java
+Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost/control_de_stock?useTimeZone=true&serverTimeZone=UTC",
+                "root",
+                "contrasenia");
+
+con.close();
+```
+
+sin olvidar de siempre cerrar las conexiones.
+
+Para poder crear un comando de sql necesitamos `Statement statement = con.createStatement();`. Con esto podemos decidir cómo ejecutar el código: `statement.execute(SELECT * from PRODUCTO);`. Este comando puede retornar un boolean, en el que si es `1` es un valor que retornó, es decir, es un SELECT; en el caso contrario es un DELETE, UPDATE o INSERT.
+
+Ya que podemos obtener los datos de la tabla con `ResultSet resu = statement.getResultSet();`, podemos guardarlo en una lista de mapas, es decir que nuestro resultado será así: `List<Map<String, String>> resultado = new ArrayList<>();`.
+
+Ya que el resultado contiene varias líneas, las vamos agregando en un  nuevo `Map` con los datos del nombre de la columna y su valor. al final lo agregamos a nuestra lista y retornamos la lista.
+
+Se ha creado una nueva clase para la conexión. A esta acción se le llama **FACTORY METHOD**. 
+
+RECORDAR, escribir dentro del comando sql comillas simples para atributos de tipo cadena.
+
+**SQL INJECTION** es el tratar de modificar la base de datos a partir de comandos sql para romper la aplicación. Para evitar esto se realiza un `prepareStatement` con la conexión. 
+
+Se puede utilizar `ctrl + 1`para acciones rápidas.
+
+ Para evitar que se agreguen elementos inconclusos a la BD, se llama a la función de la conección: `conection.setAutoCommit(false);`
+
+Para garantizar que se hagan los cambios se agrega `conection.commit();` Este se puede poner dentro de un **try** y dentro del  **catch** agregar un `conection.rollback();`.
+
+Se puede cerrar también un `prepare statement`con un `.close()`
+
+--
+
+**Try with resources** cierra automáticamente las variables.
+
+Versión 7 `try(ResultSet resulset = statement.getGeneratedkeys();){ ... }`
+
+Versión 11 
+
+```java
+final ResultSet resulset = statement.getGeneratedkeys();
+try(resulset){
+    ...
+}
+```
+
+final 
+
+Para hacer la conexión con la BD, se conectan drivers
+
+**POOL DE CONEXIONES** ayuda a comunicarse con el JDBC para mantener una cantidad min y max de conexiones abiertas en la aplicación para no tener una cola grande y mantener la aplicación. El C3P0 es un driver de este pool. **DATA SOURCE** está dentro de la pool. 
+
+```java
+//PARA CONFIGURAR UN PULL DE CONEXIONES
+<dependency>
+    <groupId>com.mchange</groupId>
+    <artifactId>c3p0</artifactId>
+    <version>0.9.5.5</version>
+</dependency>
+// AGREGAR MÁS DETALLES DATASOURCE VIA ELOG DE LA CONSOLA 
+<dependency>
+    <groupId>com.mchange</groupId>
+    <artifactId>mchange-commons-java</artifactId>
+    <version>0.2.20</version>
+</dependency>
+```
+
+SE cambia la conectionfactory para que cree la conexión con el pool y no sea directo.
+
+Se agregó la clase de **Productos** para darle mejor estructura al código.
+
+**DATA ACCESS OBJECT** o **DAO**, son clases que trabajan con operaciones de accesos de una entidad. Todas las operaciones referentes al acceso de la tabla de producto .
+
+**TRATAR LAS EXEPCIONES EN EL MISMO LUGAR QUE OCURREN**
+
+MVC = Model View Controller
+
+```sql
+CREATE TABLE categoria(
+    -> id INT AUTO_INCREMENT,
+    -> nombre VARCHAR(50) NOT NULL,
+    -> PRIMARY KEY(id)
+    -> )Engine= InnoDB;
+
+INSERT INTO categoria(nombre) VALUES('Muebles'),('Tecnologia'),('Cocina'),('Zapatillas');
+ALTER TABLE producto ADD COLUMN categoria_id INT;
+ALTER TABLE producto ADD FOREIGN KEY (categoria_id) REFERENCES categoria(id);
+```
+
+`executequery` devuelve el resultado de la query.
+
+**Querys N+1** CONEXIONES NUEVAS al realizar consultas. Cuando para ejecutar una funcionalidad se van muchas veces a la BD más de lo necesario.
+
+**INNER JOIN** permite unir dos tablas con un atributo en común. 
+
+## Persistencia con JPA: Hibernate.
+
+### Problemas
+
+JDBC es una especificación para acceder a las BD relacionales. Facilitaba el acceso.
+
+Los códigos que utilizan JDBC son más verbosos y eso aumenta la dificultad de mantenimiento. El JDBC causa un acoplamiento mayor entre el código de la aplicación y la base de datos.
+
+JDBC es un estándar de bajo nivel para interactuar con bases de datos. JPA es un estándar de alto nivel para el mismo propósito.
+
+### Creación de proyecto
+
+Se crea un proyecto maven simple llamado `com.alura.tienda`, y dentro del pom.xml se agrega: 
+
+```java
+<dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.6.14.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+```
+
+Se actualiza el proyecto dando clic derecho a la carpeta del proyecto / maven / actualizar.
+
+Para crear un archivo de persistencia se crea una carpeta dentro de `main/resurces` con  el nombre de **META-INF**. Dentro de la carpeta de crea un archivo **persistence.xml**.
+
+Por cada base de datos se tiene una unidad de persistencia.
+
+El nombre equivale a la base de datos. El tipo de transacción es : **JTA** (servidor externo) o **RESOURCE_LOCAL** (local).
+
+La propiedad primera es el driver o controlador 
+
+Hibernate reconoce las entidades representadas por clases en el modelo.
+
+Se deja la implementación de java persistence al momento de agregar `@Entity` dentro de la clase `Producto` del modelo.
+
+Se realiza un mapeo con hibernate dentro de la clase para comparar los elementos dentro de la BD. `@Table(name="productos")`.
+
+Una entidad JPA funciona como un espejo de una tabla en el banco de datos.
+
+```java
+@Id 
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+public class Producto {
+@Id 
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long id;
+    private String nombre;
+    private String descripcion;
+    private BigDecimal precio;
+    private LocalDate fechaDeRegistro = LocalDate.now();
+    @Enumerated(EnumType.STRING)
+    private Categoria categoria;
+```
+
+Las **categorías** se pueden guardar en un ENUM.
+
+Para en lugar que guarde el número del lugar de la categoría en ENUM, se agrega encima de la variable de categoría `@Enumerated(EnumType.STRING)`
+
+Se agregan las categorías en una nueva tabla.
+
+**MANY to ONE** se utiliza para indicar en la clase de productos las categorías ( n productos - 1 categoria)
+
+**Ciclos de vida**. 
+
+con **new** se pasa a un estado transiente: instanciada pero no se guarda en BD. ->> se utiliza el entity manager y se persiste la entidad para pasar al estado de **Managed**, estas son candidatos para guardar en BD. **Detached** ignorados por JPA por ser cerrados.
+
+Para **guardar** los datos dentro de la BD se utiliza **commit** o **flush**. Lo que hace flush permite realizar un roll back si ocurre un error. Con commit son definitivos los cambios. 
+
+**close, clear,detach** son sinónimos para cerrar una conexión.
+
+![](C:\Users\jesh2\OneDrive\Imágenes\MD\2023-09-08-12-51-48-img_aula4_a.JPG)
+
+Si es que se requiere hacer una actualización, es necesario escribir:
+
+```java
+em.flush() // realizar un pseudocommit
+em.clear()
+
+
+celulares=em.merge(celulares);
+celulares.setNombre("SOFTWARE");
+em.flush();
+```
+
+Para **eliminar** un registro se debe estar en un estado *managed* . Luego con `em.removed(elemento)` eliminamos el registro
+
+El lenguaje PQL es un lenguaje parecido a SQL pero para JPA.
+
+Para poder ejecutarlo se utiliza 
+
+```java
+String jpql = "SELECT P FROM Producto AS P";
+entitymanager.createQuery(jpql, Productos.class).getResultList();
+```
+
+Tener en cuenta que se agrega el nombre de la entidad (clase) en lugar del nombre de la tabla.
+
+Siempre **preguntar qué valor devuelve la consulta** para retornarla. `em.createQuery(jpql,BigDecimal.class).setParameter("nombre", nombre).getSingleResult();`
+
+Para poder ver las consultas en la consola en un mejor formato, dentro de *persistence* se agrega `<property name="hibernate.format_sql" value="true" />`
+
+`@JoinTable(name="item_pedidos")` permite crear una nueva tabla unificada con los pedidos y productos.
+
+Si se crea una tabla más de la que debería al querer juntar dos tablas, se especifica dentro de `@OneToMany(`**mappedBy="pedido" )** 
+
+Se puede **sustituir** una **función** escribiendo:
+
+```java
+@NamedQuery(name= "Producto.consultarPrecioPorNombre", query= "SELECT P.precio FROM Producto AS p")
+```
+
+### Almacenamiento en memoria
+
+Para almacenar la BD en una carpeta específica se modifica dentro del archivo `persistence` la fila: `<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:tienda" /> `, cambiando *mem:tienda* por la dirección a guardar.
+
+Ahora con la aplicación de `h2 database` descargada, creamos una base de datos con la nueva dirección, agregando al final un `\database`. 
+
+Al momento de intentar guardar puede haber errores de **estado transiente**, estos se solucionan creando los DAO de las clases, que que requieren ser guardadas dentro de la BD.
+
+`@OneToMany(mappedBy="pedido",cascade=CascadeType.ALL)`
+
+Es para propagar las operaciones realizadas en una entidad en su relación.
+
+### Funciones de agregado
+
+* AVG
+
+* COUNT
+
+* SUM
+
+* MAX
+
+* MIN
+
+Para hacer una consulta con varios valores distintos se utiliza la clase **Object** en una lista: `List<Object[]>`
+
+```java
+public List<Object[]> relatorioDeVentas(){
+        String jpql = "SELECT producto.nombre, SUM(item.cantidad),MAX(pedido.fecha) "
+                + "FROM Pedido pedido "
+                + "JOIN pedido.itemsPedido item "
+                + "Join item.producto producto "
+                + "GROUP BY producto.nombre "
+                + "ORDER BY item.cantidad DESC";
+        return em.createQuery(jpql,Object[].class).getResultList();
+    }
+```
+
+2° Opcion:
+
+```java
+public List<RelatorioDeVentas> relatorioDeVentasVO(){
+        String jpql = "SELECT new com.latam.alura.tienda.vo.ReletorioDeVentas("
+                + "producto.nombre, SUM(item.cantidad),MAX(pedido.fecha) ) "
+                + "FROM Pedido pedido "
+                + "JOIN pedido.itemsPedido item "
+                + "Join item.producto producto "
+                + "GROUP BY producto.nombre "
+                + "ORDER BY item.cantidad DESC";
+        return em.createQuery(jpql,RelatorioDeVentas.class).getResultList();
+    }
+```
+
+Las **name query** son consultas dentro de la entidad.  Para no agregar una String con el comando, dentro de la clase principal (producto) se agrega `@NamedQuery(name="nuevoNombre", query = "Select....") `
+
+ahora, dentro de la clase de consulta (productoDAO) se elimina la consulta y se cambia el retorno por: `return em.createNamedQuery("nuevoNombre",BigDecimal.class).getSelectedItem();`
+
+### Estrategia de cargamento
+
+**Eager** para las anotaciones *...ToOne*
+
+**Lazy** para las anotaciones *...ToMany* 
+
+Cuando son de tipo eager, se generan consultas de tipo *join* a la base de datos. Para evitar esto se modifican las anotaciones  `@ManyToOne` agregando `@ManyToOne(fetch=FetchType.LAZY`)
+
+Cuando la conexión a la base de datos está cerrada y se quieren recuperar la información de una variable recuperada de la base de datos. Ej.
+
+```java
+EntityManager em = JPAUtils.getEntityManager();
+PedidoDao pedidoDao = new PedidoDao(em);
+Pedido pedidoConCliente - pedidoDao.consultarPedidoConCliente(21);
+em.close();
+
+System.out.printn(pedidoConCliente.getCliente().getNombre());
+```
+
+Necesitamos quitar el *lazy* para que pueda hacer las operaciones sin que la conexión a la BD esté activa.
+
+Para eso se realiza un **join** 
+
+```java
+String jpql="SELECT p FROM Pedido p JOIN FETCH p.cliente WHERE p.id=:id"; 
+         return em.createQuery (jpql, Pedido.class).setParameter("id", id).getSingleResult();
+```
+
+### Consultas con parámetros dinámicos
+
+Independientemente si se tiene un atributo o no dentro de un método, se recupera el objeto.
+
+```java
+public List<Producto> consultarPorParametros(String nombre, BigDecimal precio,LocalDate fecha){
+
+StringBuilder jpql=new StringBuilder( "SELECT p FROM Producto p WHERE 1=1 ");
+        if(nombre != null && !nombre.trim().isEmpty()) {
+             jpql.append("AND p.nombre=:nombre ");
+        if(precio != null && !precio.equals(new BigDecimal(0))) {
+             jpql.append("AND p.precios:precio ");
+        if(fecha !=null) {
+             jpql.append("AND p. .fechaDeRegistro=:fecha");
+         }
+        TypedQuery<Producto>query = em.createQuery(jpql.toString(),Producto.class);
+
+        if(nombre!=null && !nombre.trim().isEmpty()) {
+             query.setParameter("nombre", nombre);
+         }
+        if(precio!= null && !precio.equals(new BigDecimal(0))) {
+            query.setParameter("precio", precio);
+        }
+        if(fecha !=null) {
+            query.setParameter("fechaDeRegistro", fecha);
+        }
+         return query.getResultList();
+
+
+}
+```
+
+Dado que siempre será 1 dentro de la primera parte del string EN EL WHERE (evita problemas de sintaxis), se busca comparar qué elemento es diferente de nulo, para después buscar ese método dentro de la BD.
+
+Cuando se tenga el resultado volvemos a preguntar qué valor se agregó para poder obtener el resultado completo.
+
+```java
+    CriteriaBuilder builder = em.getCriteriaBuilder();
+    CriteriaQuery<Producto> query = builder.createQuery(Producto.class);
+     Root<Producto> from = query.from(Producto.class);
+     Predicate filtro = builder.and();
+
+    if(nombre!=null && !nombre.trim().isEmpty()) {
+        filtro=builder.and(filtro, builder.equal(from.get("nonbre"), nombre));
+     }
+    if(precio!=null && !precio.equals(new BigDecimal(0))) {
+        filtro=builder.and(filtro, builder.equal(from.get("precio"), precio));
+     }
+    if(fecha!=null){
+        filtro=builder.and(filtro,builder.equal(from.get("fechaDeRegistro"), fecha));
+    query=query.where(filtro);
+    }
+     return em.createQuery(query).getResultList();
+```
+
+query.form se toma de algún método que contenga el from, así como el query.
+
+Podrá ser más fácil, pero también Criteria API hace que el código sea más difícil de entender.
+
+### Simplificando entidades con Embeddable
+
+Se utiliza para agregar una clase al proyecto sin necesidad de crear una nueva tabla.
+
+En la nueva clase de agrega `@Embedabble` en lugar de Entity.
+
+Dentro del atributo de la clase 'Cliente' se agrega la nueva clase con `@embedded`
+
+```java
+@Embedded
+private DatosPersonales datos;
+```
+
+### Mapeamiento de Herencias
+
+Se puede extender una clase padre a las nuevas hijas. Para poder conectarlas se usa `@inheritance(Strategy=InheritanceType.SINGLE_TABLE` dentro de la clase padre
+
+Con esto se crea una única tabla (con single table).
+
+Esto crea una sola tabla con todos los atributos. Ayuda en el rendimiento, pero serán una gran cantidad en una sola tabla que puede ser confuso.
+
+Cambiando Single_table por `JOINED`, se crean tablas separadas, con un desempeño más lento pero más organizada
+
+### Mapeamiento de llaves compuestas
+
+Se hace referencia a una entidad por medio de llaves compuestas. 
+
+identificar elementos en nuestras entidades utilizando más de un único parámetro,
+
+Cuando se realizan búsquedas de la BD, normalmente se utiliza `em.find(Categoria.class,1l); `.
+
+Se crea una nueva clase con los atributos que serán identificadores
+
+```java
+@Embeddable
+ public class Categoriald implements Serializablek
+     private String nombre;
+     private String password;
+```
+
+Y a la clase que lo implementará 
+
+```java
+@Entity
+@Table(name="categorias")
+ public class Categoria {
+    @EmbeddedId
+     private CategoriaId categoriaId;
+
+     public Categoria() {}
+     public Categoria(String nombre) {
+        this.categoriald=new CategoriaId(nombre, "456");
+     public String getNombre() {
+         return categoriald.getNombre();
+     public void setNombre(String nombre) {
+        this.categoriald. setNombre(hombre);
+```
+
+## Maven
+
+una herramienta de gestión de dependencias que se creó en Java para ayudar con los proyectos creados en este lenguaje.
+
+[Maven – Download Apache Maven](https://maven.apache.org/download.cgi) 
+
+## Rest
+
+REST (Representational State Transfer, que significa Transferencia Representacional de Estado) es un modelo de arquitectura y no un lenguaje o tecnología de programación, que proporciona pautas para que los sistemas distribuidos se comuniquen directamente utilizando principios y protocolos web existentes sin necesidad de [SOAP](https://es.wikipedia.org/wiki/Simple_Object_Access_Protocol) u otro protocolo sofisticado.
+
+## Spring Boot 3: desarrollar una API Rest en Java
+
+Para iniciar se va a la página [Spring Initializr](https://start.spring.io/;), seleccionando el proyecto Grandle-groovy - Java - 3.1.3 - Con nombres del proyecto como `med.voll` `api` `api` `API rest para Voll clinica`
+
+Se agregan las dependencias *Spring Boot Dev Tools*, que permite modificar código y ver los cambios en tiempo real. *Lombok*, *Spring web*, 
+
+### Generando proyecto
+
+La carpeta API creada de la página se abre con el IDE IntelliJ, de ahí se ejecuta el archivo main encontrada en la carpeta src. Cuando se ejecuta se abre el navegador para acceder al servidor en `localhost::8080`
+
+ Creamos una nueva clase denominada *Hello controller* dentro de una carpeta *controller*.
+
+```java
+@SpringBootApplication
+public class ApiApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ApiApplication.class, args);
+    }
+
+}
+```
+
+Para que se actualice el proyecto de forma automática, y reiniciar automáticamente el servidor, dentro de *SETTINGS / advanced settings / allowauto-make...* y también *SETTINGS / build,execution,deployment / compiler / automatically show ...*
+
+### Request POST
+
+Para poder simular envío de datos de la parte FRONT de una aplicación se usará **INSOMNIA**.rest 
+
+Después de haber creado una cuenta se da clic en `new collection / request / new HTTP request`
+
+Una vez listos para un POST, se crea un BODY de tipo JSON. Este normalmente es llamado **PAYLOAD**. 
+
+Se cambia el apartado de `GET -> POST` dentro de insomnia. 
+
+Para **recibir los datos** se puede recibir en el método un String, señalando que es un request body. `public void registrarMedico(@RequestBody String parametro){ ...}`
+
+Un **record** es un recurso que le permite representar una clase inmutable, que contiene solo atributos, constructor y métodos de lectura, de una manera muy simple y ágil.
+
+Este tipo de clase encaja perfectamente para representar clases DTO, ya que su objetivo es únicamente representar datos que serán recibidos o devueltos por la API, sin ningún tipo de comportamiento.
+
+```java
+public void registrarMedico(@RequestBody DatosRegistroMedico parametro){
+-----
+
+
+public record DatosRegistroMedico(String nombre, String email, String documento, Especialidad especialidad, DatosDireccion direccion) {
+----
+public record DatosDireccion(String calle,String distrito,String ciudad,String numero,String complemento) {
+```
+
+Para Spring, el orden de los campos del JSON es indiferente, y solo los **nombres** deben ser los mismos que los declarados en el DTO.
+
+### CORS
+
+CORS es un mecanismo utilizado para agregar encabezados HTTP que le 
+indican a los navegadores que permitan que una aplicación web se ejecute
+ en un origen y acceda a los recursos desde un origen diferente. Este 
+tipo de acción se denomina *cross-origin HTTP request*. En la práctica, les dice a los navegadores si se puede acceder o no a un recurso en particular.
+
+### Same-origin policy
+
+Por defecto, una aplicación Front-end, escrita en JavaScript, solo 
+puede acceder a los recursos ubicados en el mismo origen de la 
+solicitud. Esto sucede debido a la política del mismo origen (*same-origin policy*),  que es un mecanismo de seguridad de los navegadores que restringe la  forma en que un documento o script de un origen interactúa con los  recursos de otro. Esta política tiene como objetivo detener los ataques maliciosos.
+
+Dos URL comparten el mismo origen si el protocolo, el puerto (si se especifica) y el host son los mismos.
+
+[GitHub - alura-es-cursos/1979-spring-boot-buenas-practicas-security at clase-4](https://github.com/alura-es-cursos/1979-spring-boot-buenas-practicas-security/tree/clase-4)
+
+## Habilitación de diferentes orígenes en Spring Boot
+
+Para configurar el CORS y permitir que un origen específico consuma 
+la API, simplemente cree una clase de configuración como la siguiente:
+
+```java
+@Configuration
+public class CorsConfiguration implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+            .allowedOrigins("http://localhost:3000")
+            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
+    }
+}
+```
+
+### Spring DATA JPA
+
+Para poder agregar dependencias en *springboot*, del archivo pom, vamos a *spring initializr*, agregamos lasdependencias `Spring Data JPA`, `MySQL Driver` y `Flyway`
+
+Se copia las dependencias y se agregan al archivo *pom*. 
+
+Para configurar la dirección de la base de datos, dentro de `resources / aplication.properties` se deben agregar:
+
+```java
+spring.datasource.url=jdbc:mysql://localhost/vollmed_api
+spring.datasource.username=USUARIO
+spring.datasource.password=contrasenia
+```
+
+Esto también se puede cambiar por una **Configuración YAML**. Tomando el mismo ejemplo de nuestro archivo `application.properties`, podemos convertirlo a YAML cambiando su nombre a `application.yml` y modificando su contenido a:
+
+```yaml
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/clinica
+        username: root
+        password: root
+```
+
+Al desarrollar el proyecto en **IntelliJ** y crear los constructores automáticamente se utilizan comandos como:
+
+```java
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
+```
+
+#### Padrón repositorio
+
+Según el famoso libro *Domain-Driven Design* de Eric Evans:
+
+> El repositorio es un mecanismo para encapsular el almacenamiento, 
+> recuperación y comportamiento de búsqueda, que emula una colección de 
+> objetos.
+
+El patrón de repositorio fomenta un diseño orientado al dominio, lo que 
+proporciona una comprensión más sencilla del dominio y la estructura de 
+datos. Además, al usar el repositorio de Spring, no tenemos que 
+preocuparnos por usar la API de JPA directamente, simplemente creando 
+los métodos, que Spring crea la implementación en tiempo de ejecución, 
+lo que hace que el código sea mucho más simple, pequeño y legible.
+
+Para sustituir las funciones DAO, se crea un **repositorio** con ayuda de una **interfaz** como si fuera clase. Esta nueva clase va a extender de otra:
+
+```java
+extends JpaRepository <Tipo_de_objeto_a_guardar,Tipo_del_objeto>
+extends JpaRepository <Medico,Long>
+```
+
+#### Migraciones Flyway
+
+Dentro de la carpeta `resources` se crea una nueva carpeta llamada `db`, y dentro de esta se crea otra llamada `migration`. Se crea un nuevo archivo llamado `V1__create-table-medicos.sql` 
+
+```sql
+create table medicos(
+id bigint not null auto_increment,
+nombre varchar(100) not null,
+email varchar(100) not null unique,
+documento varchar(6) not null unique,
+especialidad varchar(100) not null,
+calle varchar(100) not null,
+distrito varchar(100) not null,
+complemento varchar(100),
+numero varchar(20),
+ciudad varchar(100) not null,
+primary key(id)
+);
+```
+
+#### Validaciones
+
+Se agrega la dependencia de **Validation**, se da refresh.
+
+Dentro de las clases de agrega `@NotNull`o `@NotBlank` a cada atributo.
+
+```java
+public record DatosRegistroMedico(
+        @NotBlank
+        String nombre,
+        @NotBlank @Email
+        String email,
+        @NotBlank @Pattern(regexp = "\\d{4,6}")
+        String documento,
+        @NotNull
+        Especialidad especialidad,
+        @NotNull @Valid
+        DatosDireccion direccion) {
+
+}
+```
+
+junto con agregar en el controller el `@Valid`
+
+```java
+public void registrarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedicos){
+```
+
+Cuando una migración haya fallado se ejecuta 
+
+```sql
+delete from flyway_schema_history where success = 0;
+```
+
+### Request GET
+
+Para poder obtener datos de la base de datos basta con 
+
+```java
+ @GetMapping
+    public List<Medico> listadoMedico(){
+        return medicoRepository.findAll();
+    }
+```
+
+pero para especificar campos:
+
+```java
+ @GetMapping
+    public List<DatosListadoMedico> listadoMedicos(){
+        return medicoRepository.findAll().stream().map(DatosListadoMedico::new).toList();
+    }
+```
+
+Se crea un record de (DatosListadoMedico)
+
+```java
+public record DatosListadoMedico( String nombre, String especialidad, String documento, String email) {
+    public DatosListadoMedico(Medico medico){
+        this(medico.getNombre(),medico.getEspecialidad().toString(), medico.getDocumento(), medico.getEmail());
+    }
+}
+```
+
+`@JsonIgnore` nos ayuda a ignorar ciertas propiedades de una clase Java cuando se serializa en un objeto JSON.
+
+### Bucle infinito que causa `StackOverflowError`
+
+Otro problema muy recurrente cuando se trabaja directamente con 
+entidades JPA ocurre cuando una entidad tiene alguna auto-relación o 
+relación bidireccional. Por ejemplo, considere las siguientes entidades 
+JPA:
+
+Al devolver un objeto de tipo 'Producto' en el Controller, Spring 
+tendría problemas para generar el JSON de este objeto, lo que provocaría
+ una excepción de tipo 'StackOverflowError'. Este problema ocurre porque
+ el objeto producto tiene un atributo de tipo `Categoría`, que a su vez tiene un atributo de tipo `Lista<Producto>`, lo que provoca un bucle infinito en el proceso de serialización a JSON.
+
+Este problema se puede resolver usando la anotación `@JsonIgnore` o usando las anotaciones `@JsonBackReference` y `@JsonManagedReference`, pero también se puede evitar usando un DTO que represente solo los datos que se deben devolver en el JSON.
+
+### Paginación
+
+Las paginaciones ayudan a organizar el cómo se mostrará la información en la pantalla.
+
+En el navegador con ayuda de *Insomnia*, si se mandan parámetros como `/medicos?size=2&page=1` mostrará resultados como se especifican.
+
+Esto se puede cambiar el default agregando en el controlador
+
+```java
+public Page<DatosListadoMedico> listadoMedicos(@PageableDefault(size = 2) Pageable paginación){
+return medicoRepository.findAll(paginación).map(DatosListadoMedico::new);
+    } 
+}
+```
+
+```java
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+----
+
+```java
+@GetMapping
+public Page<DatosListaPaciente> listar(@PageableDefault(page = 0, size = 10, sort = {"nombre"}) Pageable paginacion {    return repository.findAll(paginacion).map(DatosListaPaciente::new);
+}
+```
+
+```java
+public record DatosListaPaciente(String nombre, String email, String documentoIdentidad) {
+    public DatosListaPaciente(Paciente paciente) {
+        this(paciente.getNombre(), paciente.getEmail(), paciente.getDocumentoIdentidad());
+    }
+}
+```
+
+```ini
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+---
+
+### Request PUT
+
+Para esta opción se agregó el método para poder actualizar la información 
+
+```java
+ @PutMapping
+ @Transactional
+
+    public void actualizarMedico(@RequestBody @Valid DatosActualizarMedico datosActualizarMedico){
+        Medico medico = medicoRepository.getReferenceById(datosActualizarMedico.id());
+        medico.actualizarDatos(datosActualizarMedico);
+    }
+```
+
+Se creó el *record* DatosActualizarMedico el cual contiene `public record DatosActualizarMedico(@NotNull Long id, String nombre, String documento, DatosDireccion direccion) {`
+
+Dentro de la clase *Medico* se agregó el método
+
+```java
+public void actualizarDatos(DatosActualizarMedico datosActualizarMedico) {
+        if (datosActualizarMedico.nombre()!=null)
+            this.nombre=datosActualizarMedico.nombre();
+        if (datosActualizarMedico.documento()!=null)
+            this.documento= datosActualizarMedico.documento();
+        if (datosActualizarMedico.direccion()!=null)
+            this.direccion=direccion.actualizarDatos(datosActualizarMedico.direccion());
+
+    }
+```
+
+Se recupera el médico completo con el id, 
+
+### DELETE
+
+Para borrar de la base de datos, pasamos los parámetros
+
+```java
+@DeleteMapping("/{id}")
+    @Transactional
+    public void eliminarMedico(@PathVariable Long id) {
+        Medico medico = medicoRepository.getReferenceById(id);
+        medicoRepository.delete(medico);
+    }
+```
+
+#### Exclusión lógica
+
+Simplemente se cambia el valor de activo a `false`. Después se cambia el método `GET` para mostrar solo los médicos activos.
+
+```java
+return medicoRepository.findByActivoTrue(paginacion).map(DatosListadoMedico::new);
+```
+
+El nombre del método simboliza el where de los comandos SQL.
+
+---
+
+```java
+@PutMapping
+@Transactional
+public void atualizar(@RequestBody @Valid DatosActualizacionPaciente datos) {
+    var paciente = repository.getReferenceById(datos.id());
+    paciente.atualizarInformacion(datos);
+}
+
+@DeleteMapping("/{id}")
+@Transactional
+public void remover(@PathVariable Long id) {
+    var paciente = repository.getReferenceById(id);
+    paciente.inactivar();
+}
+```
+
+```java
+private Boolean activo;
+
+public Paciente(DatosRegistroPaciente datos) {
+    this.activo = true;
+    this.nombre = datos.nombre();
+    this.email = datos.email();
+    this.telefono = datos.telefono();
+    this.documentoIdentidad = datos.documentoIdentidad();
+    this.direccion = new Direccion(datos.direccion());
+}
+
+public void atualizarInformacion(DatosActualizacionPaciente datos) {
+    if (datos.nombre() != null)
+        this.nombre = datos.nombre();
+
+    if (datos.telefono() != null)
+        this.telefono = datos.telefono();
+
+    if (datos.direccion() != null)
+        direccion.atualizarInformacion(datos.direccion());
+}
+
+public void inactivar() {
+    this.activo = false;
+}
+```
+
+```java
+public record DatosActualizacionMedico(    Long id,    String nombre,    String telefono,    @Valid DatosActualizacionDireccion direccion) {
+}
+```
+
+```java
+public record DatosListaPaciente(Long id, String nombre, String email, String documentoIdentidad) {
+    public DatosListaPaciente(Paciente paciente) {
+        this(paciente.getId(), paciente.getNombre(), paciente.getEmail(), paciente.getDocumentoIdentidad());
+    }
+}
+```
+
+```sql
+alter table pacientes add column activo tinyint;
+update pacientes set activo = 1;
+alter table pacientes modify activo tinyint not null;
+```
+
+[GitHub - alura-es-cursos/1979-spring-boot-buenas-practicas-security at clase-4](https://github.com/alura-es-cursos/1979-spring-boot-buenas-practicas-security/tree/clase-4)
+
+## Spring Boot 3: aplique las mejores prácticas y proteja una API Rest
+
+Podemos retornar códigos específicos para cada método. Para esto el método debe retornar un **ResponseEntity**. `return ResponseEntity.noContent().build();`
+
+También se puede agregar un atributo / objeto para regresarlo. 
+
+```java
+return ResponseEntity.ok(new DatosRespuestaMedico(medico.getId(), medico.getNombre(), medico.getEmail(),
+        medico.getTelefono(), medico.getEspecialidad().tostring(),
+         new DatosDireccion(medico. getDireccion().getCalle(). medico.getDireccion().getDistrito().
+                 medico. getDireccion().getCiudad(). medico.getDireccion().getNumero().
+                medico.getDireccion().getComplemento()))):
+```
+
+El **POST** debe retornar el código 201, pero también la url donde se puede encontrar el médico. Para esto el método debe recibir un **UriComponentsBuilder**, para después crear una liga como la siguiente.
+
+```java
+URI url = uriComponentsBuilder.path("/medicos/{id)").buildAndExpand(medico.getId()).touri();
+ return ResponseEntity.created(url).body(datosRespuestaMedico);
+```
+
+Esta forma es para crear una liga un link para una nueva página con los datos del médico.
+
+Los response entity pueden ser **WRAPPERS** para encapsular las respuestas del servidor.
+
+Dentro de la variable de retorno se puede especificar qué objeto está retornando.    
+
+`public ResponseEntity<DatosRespuestaMedico> registrarMedico(){...}`
+
+```java
+@GetMapping
+public ResponseEntity<Page<DatosListadoMedico>> listadoMedicos (@PageableDefault(size = 2) Pageable paginacion)    
+return ResponseEntity.ok(medicoRepository.findByActivoTrue(paginacion).mapDatosListadoMedico::new]);
+
+
+@GetMapping("/{id}")
+ public ResponseEntity<DatosRespuestaMedico> retornaDatosMedico(@PathVariable Long id) {
+    Medico medico = medicoRepository.getReferenceById(id);
+    var datosMedico = new DatosRespuestaMedico(medico.getd(). medico.getNombre(), medico.getEmail((),
+          medico.getTelefono(), medico.getEspecialidad().tostring(),
+          new DatosDireccion (medico. getDireccion().getCalle(), medico.getDireccion().getDistrito(),
+                medico. b.getDireccion().getCiudad(), medico. getDireccion().getNumero(),
+                medico. b.getDireccion().getComplemento())));
+    return ResponseEntity.ok(datosMedico);
+```
+
+Los **errores** pueden ser modificados en la forma en que son mostrados. `server.error.include-stacktrace=never`elimina el trace del error obtenido.     
+
+Cuando queremos modificar el tipo de error que arroje el sistema podemos crear un nuevo paquete dentro de `api/infra/TratadorDeErrores` 
+
+```java
+@RestControllerAdvice
+ public class TratadorDeErrores
+                               {
+    @ExceptionHandler(EntityNotFoundException.class)
+     public ResponseEntity tratarError404(){ 
+         return ResponseEntity.notFound().build();
+ }
+
+
+@ExceptionHandler(MethodArgumentNotValidException.class)
+ public ResponseEntity tratarError400 (MethodArgumentNotValidException e) {
+     var errores = e.getFieldErrors().stream().map(DatosErrorValidacion::new).tolist()
+     return ResponseEntity.badRequest().body(errores);
+}
+
+ private record DatosErrorValidacion(String campo, String error){
+                          -
+     public DatosErrorValidacion(FieldError error) {
+         thisterror.getField(), error.getDefaultMessage());
+ )
+```
+
+[Common Application Properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
+
+Para personalizar mensajes de error se puede poner
+
+```java
+@NotBlank(message = "Email es obligatorio")
+    @Email(message = "Formato de email es inválido")
+    String email
+...
+```
+
+Otra forma es aislar los mensajes en un archivo de propiedades, que 
+debe tener el nombre ValidationMessages.properties y estar creado en el 
+directorio src/main/resources:
+
+```properties
+nombre.obligatorio=El nombre es obligatorio
+email.obligatorio=Correo electrónico requerido
+```
+
+Y, en las anotaciones, indicar la clave de las propiedades por el propio atributo `message`, delimitando con los caracteres { e }:
+
+```java
+public record DatosRegistroMedico(    @NotBlank(message = "{nombre.obligatorio}")
+    String nombre,
+
+    @NotBlank(message = "{email.obligatorio}")
+    @Email(message = "{email.invalido}")
+    String email,
+```
+
+### Spring security
+
+Se debe autenticar el usuario para poder acceder a la aplicación. Este proceso manda  las credenciales a la BD para verificarlas y posteriormente devuelve un Jeison Web Token con los datos de autenticación del usuario. El cliente manda ese token como llave para realizar ahora la autorización. La autenticación se realiza **state less**, es decir, sin estado, *el servidor no conoce qué usuarios están logueados*, **state full** tiene estado.
+
+Java Server Faces en el servidor está la sesión del usuario.
+
+Se agrega la dependencia de security
+
+Ya que se autogenera un autenticador con usuario `user` y contraseña autogenerada
+
+Para evitar esto se ha creado una nueva tabla de usuarios junto con la migración correspondiente.
+
+Para poder recuperar estos usuarios se crea un **repositorio**  con la ayuda de una interfaz.
+
+```java
+public interface UsuariosRepository extends JpaRepository<Usuario, Long> { // el objeto que va a manejar y la llave primaria
+```
+
+Después se agrega un servicio en la carpeta de *infra*, donde con el **estereotipo** `@Service` se le dice al programa que escanee esa clase porque es un servicio de la aplicación.
+
+```java
+@Service
+public class AutenticacionService implements UserDetailsService {
+        @Autowired
+        private UsuarioRepository usuarioRepository;
+
+        @Override
+        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+            return usuarioRepository.findByUsername(username);
+        }
+    }
+```
+
+Lo que está con `@Configuration` es lo que primero se va a revisar en el programa, son prerrequisitos que se deben cumplir. 
+
+## Spring boot: documentar
+
+```kotlin
+public record DatosCompra(
+@JsonAlias("producto_id") Long idProducto,
+@JsonAlias("fecha_compra") LocalDate fechaCompra
+){}
+La anotación @JsonAlias sirve para mapear "alias" alternativos para los campos que se recibirán del JSON, y es posible asignar múltiples alias:
+public record DatosCompra(
+@JsonAlias({"producto_id", "id_producto"}) Long idProducto,
+@JsonAlias({"fecha_compra", "fecha"}) LocalDate fechaCompra
+){}
+```
+
+```less
+@NotNull
+@Future
+@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
+LocalDateTime data
+```
+
+Dependiendo de la acció, una clase puede ser un `@Component`, `@Controller`, `@Repository` o `@Service`
+
+Con la anotación @Autowired se pueden utilizar los diferentes métodos de la clase del repositorio.
+
+El patrón Service es muy utilizado en la programación y su nombre es 
+muy conocido. Pero a pesar de ser un nombre único, Service puede ser 
+interpretado de varias maneras: puede ser un caso de uso (Application 
+Service); un Domain Service, que tiene reglas de su dominio; un 
+Infrastructure Service, que utiliza algún paquete externo para realizar 
+tareas; etc.
+
+muchas veces no es necesario crear un Service y, por lo tanto, agregar 
+otra capa y complejidad innecesarias a nuestra aplicación. Una regla que
+ podemos utilizar es la siguiente: si no hay reglas de negocio, 
+simplemente podemos realizar la comunicación directa entre los 
+controllers y los repositories de la aplicación.
+
+[GitHub - alura-es-cursos/Spring-Boot-3 at stage-5](https://github.com/alura-es-cursos/Spring-Boot-3/tree/stage-5)
+
+-----
 
 # Definiciones
 
@@ -2192,3 +4100,112 @@ Garbage collector:
 Memoria heap.
 
 Instancia
+
+Persistencia
+
+### Problemas de recepción/devolución de la entidad JPA
+
+De hecho, es mucho más simple y cómodo no usar DTO, sino tratar 
+directamente con entidades JPA en los Controllers. Sin embargo, este 
+enfoque tiene algunas desventajas, incluida la vulnerabilidad de la 
+aplicación a los ataques de **Mass Assignment**.
+
+Uno de los problemas es el hecho de que, al devolver una entidad JPA 
+en un método del Controller, Spring generará el JSON que contiene **todos** sus atributos, y este no siempre es el comportamiento que queremos.
+
+Eventualmente podemos tener atributos que no queremos que sean 
+devueltos en el JSON, ya sea por razones de seguridad, en el caso de 
+datos *sensibles*, o incluso porque no son utilizados por clientes API.
+
+### DTO
+
+El patrón DTO (*Data Transfer Object*) es un patrón 
+arquitectónico que se usó ampliamente en aplicaciones Java distribuidas 
+(arquitectura cliente/servidor) para representar los datos que eran 
+enviados y recibidos entre aplicaciones cliente y servidor.
+
+El patrón DTO puede (y debe) usarse cuando no queremos exponer todos 
+los atributos de alguna entidad en nuestro proyecto, una situación 
+similar a los salarios de los empleados que discutimos anteriormente. 
+Además, con la flexibilidad y la opción de filtrar qué datos se 
+transmiten, podemos ahorrar tiempo de procesamiento.
+
+### Mass Assignment Attack
+
+o Ataque de asignación 
+masiva, en español, ocurre cuando un usuario logra inicializar o 
+reemplazar parámetros que no deben ser modificados en la aplicación.
+
+### PUT
+
+El método PUT reemplaza todos los datos actuales de un recurso con 
+los datos enviados en la solicitud, es decir, estamos hablando de una 
+actualización completa. Entonces, con él, hacemos la actualización 
+completa de un recurso en una sola solicitud.
+
+### PATCH
+
+El método PATCH, a su vez, aplica modificaciones **parciales** a un recurso. Por lo tanto, es posible modificar solo una parte de un 
+recurso. Con PATCH, entonces, realizamos actualizaciones parciales, lo 
+que flexibiliza las opciones de actualización.
+
+### Categoría de código
+
+Los códigos HTTP (o HTTPS) tienen tres dígitos, y el primer dígito 
+representa la clasificación dentro de las cinco categorías posibles.
+
+- 1XX: Informativo: la solicitud fue aceptada o el proceso aún está en curso;
+- 2XX: Confirmación: la acción se completó o se comprendió;
+- 3XX: Redirección: indica que se debe hacer o se debió hacer algo más para completar la solicitud;
+- 4XX: Error del cliente: indica que la solicitud no se puede completar o contiene una sintaxis incorrecta;
+- 5XX: Error del servidor: el servidor falló al concluir la solicitud.
+
+### Error 403
+
+El código 403 es el error "Prohibido". Significa que el servidor 
+entendió la solicitud del cliente, pero se niega a procesarla, ya que el
+ cliente no está autorizado para hacerlo.
+
+### Error 404
+
+Cuando ingresa una URL y recibe un mensaje de Error 404, significa 
+que la URL no lo llevó a ninguna parte. Puede ser que la aplicación ya 
+no exista, que la URL haya cambiado o que haya ingresado una URL 
+incorrecta.
+
+### Error 500
+
+Es un error menos común, pero aparece de vez en cuando. Este error 
+significa que hay un problema con una de las bases que hace que se 
+ejecute una aplicación. Básicamente, este error puede estar en el 
+servidor que mantiene la aplicación en línea o en la comunicación con el
+ sistema de archivos, que proporciona la infraestructura para la 
+aplicación.
+
+### Error 503
+
+El error 503 significa que el servicio al que se accede no está 
+disponible temporalmente. Las causas comunes son un servidor que está 
+fuera de servicio por mantenimiento o sobrecargado. Los ataques 
+maliciosos como DDoS causan mucho este problema.
+
+https://http.dog/
+
+**Programación orientada a aspectos**
+
+### Cadena de filtros
+
+### SOLID
+
+SOLID es un acrónimo que representa cinco principios de programación:
+
+- Principio de Responsabilidad Única (Single Responsibility Principle)
+- Principio Abierto-Cerrado (Open-Closed Principle)
+- Principio de Sustitución de Liskov (Liskov Substitution Principle)
+- Principio de Segregación de Interfaces (Interface Segregation Principle)
+- Principio de Inversión de Dependencia (Dependency Inversion Principle)
+
+Cada principio representa una buena práctica de programación que, 
+cuando se aplica en una aplicación, facilita mucho su mantenimiento y 
+extensión. Estos principios fueron creados por Robert Martin, conocido 
+como Uncle Bob, en su artículo Design Principles and Design Patterns.
